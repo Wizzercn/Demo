@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.wizzer</groupId>
-    <artifactId>bbc</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>budiot</artifactId>
+    <version>1.0</version>
+    <name>budiot-tdb</name>
+    <url>http://www.wizzer.cn</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <nutz-version>1.r.65-SNAPSHOT</nutz-version>
-        <tio-version>2.0.3.v20171215-RELEASE</tio-version>
-        <redis-version>2.9.0</redis-version>
     </properties>
     <developers>
         <developer>
@@ -45,24 +45,9 @@
             <version>${nutz-version}</version>
         </dependency>
         <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>${redis-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.nutz</groupId>
-            <artifactId>nutz-integration-jedis</artifactId>
-            <version>${nutz-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.t-io</groupId>
-            <artifactId>tio-core</artifactId>
-            <version>${tio-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.t-io</groupId>
-            <artifactId>tio-http-server</artifactId>
-            <version>0.0.5-tio-http</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.21</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -79,30 +64,16 @@
             <artifactId>guava</artifactId>
             <version>23.0</version>
         </dependency>
+        <!-- rabbitmq -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.28</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.alibaba</groupId>
-                    <artifactId>jconsole</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.alibaba</groupId>
-                    <artifactId>tools</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>4.0.0</version>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.41</version>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.1.4</version>
+            <groupId>org.nutz</groupId>
+            <artifactId>nutz-integration-rabbitmq</artifactId>
+            <version>${nutz-version}</version>
         </dependency>
     </dependencies>
     <build>
@@ -155,7 +126,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib</classpathPrefix>
-                            <mainClass>cn.wizzer.bbc.MainServer</mainClass>
+                            <mainClass>cn.wizzer.auto.server.MainServer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -174,7 +145,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>cn.wizzer.bbc.MainServer</mainClass>
+                                    <mainClass>cn.wizzer.auto.server.MainServer</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -183,5 +154,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
