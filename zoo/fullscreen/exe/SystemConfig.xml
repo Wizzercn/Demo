@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<systemConfig>
-  <starturl>https://www.baidu.com</starturl>
-  <returntime>30</returntime>
-  <offtime>17:30:00</offtime>
-  <exitkey>7890</exitkey>
-</systemConfig>
