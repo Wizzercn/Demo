@@ -1,0 +1,12 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WindowsApplication1.Form1.resources
+obj\Debug\FullSreenBrowse.csproj.GenerateResource.Cache
+bin\Debug\FullSreenBrowse.exe.manifest
+bin\Debug\FullSreenBrowse.application
+bin\Debug\FullSreenBrowse.exe
+bin\Debug\FullSreenBrowse.pdb
+obj\Debug\FullSreenBrowse.Properties.Resources.resources
+obj\Debug\FullSreenBrowse.exe.manifest
+obj\Debug\FullSreenBrowse.application
+obj\Debug\FullSreenBrowse.exe
+obj\Debug\FullSreenBrowse.pdb
