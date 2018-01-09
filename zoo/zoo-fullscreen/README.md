@@ -14,6 +14,6 @@
 
 4、参数设置：找到安装目录下的SystemConfig.xml文件，其中starturl为起始网页地址；returntime为多久无操作返回起始网页（单位：分钟）；offtime为每天关机时间；exitkey为退出程序的密码；
 
-5、软件需要.NET2.0环境，环境安装包有些大，就不上传了，请到 http://www.microsoft.com/downloads/details.aspx?FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&displaylang=zh-cn 下载.
+5、软件需要.NET2.0环境，安装包有些大，就不上传了，请到 http://www.microsoft.com/downloads/details.aspx?FamilyID=0856EACB-4362-4B0D-8EDD-AAB15C5E04F5&displaylang=zh-cn 下载.
 
 

@@ -11,3 +11,4 @@
 |[nutz-tio-httpserver-api](https://github.com/Wizzercn/demo/tree/master/nutz-tio-httpserver-api) |基于 nutz + t-io httpserver 实现的敏捷API服务示例代码|
 |[nutz-tio-socket](https://github.com/Wizzercn/demo/tree/master/nutz-tio-socket) |基于 nutz + t-io + rabbitmq 实现的socket通信服务|
 |[zoo-fullscreen](https://github.com/Wizzercn/demo/tree/master/zoo/zoo-fullscreen) |基于 vs2005 c# 编写的全屏浏览器|
+|[zoo-fweight](https://github.com/Wizzercn/demo/tree/master/zoo/zoo-fweight) |基于 vb6.0 编写的地磅称重软件(2007)|
