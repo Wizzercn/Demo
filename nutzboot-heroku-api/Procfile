@@ -1,0 +1,1 @@
+web: java -Djetty.port=${PORT} -jar target/bbc-1.0-SNAPSHOT.jar
