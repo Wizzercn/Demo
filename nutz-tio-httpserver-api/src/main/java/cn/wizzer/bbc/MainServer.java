@@ -1,6 +1,5 @@
 package cn.wizzer.bbc;
 
-import cn.wizzer.bbc.http.HttpServer;
 import org.nutz.dao.Dao;
 import org.nutz.dao.util.Daos;
 import org.nutz.ioc.impl.NutIoc;
@@ -8,6 +7,7 @@ import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.ioc.loader.combo.ComboIocLoader;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
+import org.tio.http.server.HttpServerStarter;
 
 /**
  * Created by Wizzer on 2018/1/8.
@@ -24,7 +24,7 @@ public class MainServer {
             NutIoc ioc = new NutIoc(loader);
             Globals.ioc = ioc;
             //http
-            ioc.get(HttpServer.class).init();
+            ioc.get(HttpServerStarter.class).start();
             //初始化表
             Daos.createTablesInPackage(ioc.get(Dao.class), "cn.wizzer.bbc.http.models", false);
         } catch (Exception e) {

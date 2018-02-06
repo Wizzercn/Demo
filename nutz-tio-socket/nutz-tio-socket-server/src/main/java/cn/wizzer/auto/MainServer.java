@@ -1,6 +1,5 @@
 package cn.wizzer.auto;
 
-import cn.wizzer.auto.http.HttpServer;
 import cn.wizzer.auto.socket.SocketServer;
 import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
@@ -11,6 +10,7 @@ import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.ioc.loader.combo.ComboIocLoader;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
+import org.tio.http.server.HttpServerStarter;
 
 /**
  * Created by Wizzer on 2017/9/13.
@@ -25,10 +25,11 @@ public class MainServer {
                     new String[]{"*json", "config/ioc/", "*anno", "cn.wizzer", "*rabbitmq", "*jedis"}
             );
             NutIoc ioc = new NutIoc(loader);
+            Globals.ioc = ioc;
             //socket
             ioc.get(SocketServer.class).init();
             //http
-            ioc.get(HttpServer.class).init();
+            ioc.get(HttpServerStarter.class).start();
             //mq
             String topicQueue = "sweeper-tioTopicQueue";
             ConnectionFactory factory = ioc.get(ConnectionFactory.class, "rabbitmq_cf");

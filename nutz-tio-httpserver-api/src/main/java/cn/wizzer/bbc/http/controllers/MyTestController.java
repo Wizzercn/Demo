@@ -18,10 +18,12 @@ import org.tio.http.server.util.Resps;
 /**
  * Created by Wizzer on 2018/1/8.
  */
+@IocBean
 @RequestPath(value = "/test")
 public class MyTestController {
     private static final Log log = Logs.get();
-    private BbcTestSerivce bbcTestSerivce= Globals.ioc.get(BbcTestSerivce.class);
+    @Inject
+    private BbcTestSerivce bbcTestSerivce;
 
     @RequestPath(value = "/list")
     public HttpResponse list(HttpRequest request) throws Exception {

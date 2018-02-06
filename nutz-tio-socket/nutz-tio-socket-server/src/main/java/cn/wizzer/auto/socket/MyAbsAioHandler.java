@@ -1,7 +1,7 @@
 package cn.wizzer.auto.socket;
 
-import com.xiaoleilu.hutool.date.DateTime;
 import org.nutz.ioc.loader.annotation.IocBean;
+import org.nutz.lang.Times;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 import org.tio.core.ChannelContext;
@@ -14,6 +14,7 @@ import org.tio.core.utils.ByteBufferUtils;
 import org.tio.utils.json.Json;
 
 import java.nio.ByteBuffer;
+import java.util.Date;
 
 /**
  * Created by Wizzer on 2017/9/18.
@@ -79,7 +80,7 @@ public abstract class MyAbsAioHandler implements AioHandler {
         } else {//组包成功
             MyPacket imPacket = new MyPacket();
             imPacket.setIp(channelContext.getClientNode().getIp());
-            imPacket.setTime(DateTime.now().toString("yyyy-MM-dd HH:mm:ss"));
+            imPacket.setTime(Times.format("yyyy-MM-dd HH:mm:ss", new Date()));
             //$$
             byte[] headBytes = new byte[2];
             System.arraycopy(buffer.array(), startPosition, headBytes, 0, headBytes.length);
@@ -109,7 +110,7 @@ public abstract class MyAbsAioHandler implements AioHandler {
             System.arraycopy(buffer.array(), startPosition + 30, bodyBytes, 0, bodyBytes.length);
             imPacket.setBody(bodyBytes);
 
-            log.debug("imPacket::"+imPacket.getImei()+"  "+imPacket.getType()+"\r\n" + Json.toJson(imPacket));
+            log.debug("imPacket::" + imPacket.getImei() + "  " + imPacket.getType() + "\r\n" + Json.toJson(imPacket));
             return imPacket;
         }
     }

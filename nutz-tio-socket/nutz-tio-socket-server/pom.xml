@@ -12,7 +12,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <nutz-version>1.r.65-SNAPSHOT</nutz-version>
-        <tio-version>2.0.3.v20171215-RELEASE</tio-version>
+        <tio-version>2.0.8.v20180205-RELEASE</tio-version>
+        <tio-http-version>0.0.8-tio-http</tio-http-version>
         <redis-version>2.9.0</redis-version>
     </properties>
     <developers>
@@ -64,7 +65,7 @@
         <dependency>
             <groupId>org.t-io</groupId>
             <artifactId>tio-http-server</artifactId>
-            <version>0.0.5-tio-http</version>
+            <version>${tio-http-version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
