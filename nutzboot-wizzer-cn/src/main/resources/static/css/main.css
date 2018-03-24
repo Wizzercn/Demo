@@ -1,0 +1,236 @@
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    font-size: 14px;
+    line-height: 1.64345;
+    overflow-x: hidden;
+    color: #686868;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bg-gray {
+    background-color: #fafafa;
+    border-bottom: 1px solid #f5f5f5;
+    border-top: 1px solid #f5f5f5;
+}
+
+.bg-dark {
+    background: -webkit-linear-gradient(#54616e, #353839);
+    background: -moz-linear-gradient(#54616e, #353839);
+    background: -ms-linear-gradient(#54616e, #353839);
+    background: -o-linear-gradient(#54616e, #353839);
+    background: linear-gradient(#54616e, #353839);
+}
+
+.bg-overlay {
+    background: -webkit-linear-gradient(#bcd7f1, #92ace7);
+    background: -moz-linear-gradient(#444F5C, #334159);
+    background: -ms-linear-gradient(#444F5C, #334159);
+    background: -o-linear-gradient(#444F5C, #334159);
+    background: linear-gradient(#bcd7f1, #92ace7);
+    opacity: 0.4;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    overflow: hidden !important;
+}
+
+.status {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url("../img/nutzlogo.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin: -60px 0 0 -60px;
+}
+
+.service-item {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.service-item > i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+    line-height: 48px;
+    color: #3bafda;
+    text-align: center;
+}
+
+.service-item h4 {
+    text-align: center;
+}
+
+.service-item ul {
+    list-style-type: none;
+    font-size: 26px;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.service-more {
+    margin-top: 25px;
+    color: #97a0af;
+}
+
+h4.follow {
+    text-align: center;
+    margin-top: 1rem;
+    color: #FFF;
+}
+
+ul.social {
+    margin: 1rem auto;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+ul.social > li {
+    display: inline-block;
+}
+
+ul.social > li > a {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 36px;
+    background-color: #FFF;
+    color: #898989;
+    margin: 0 3px 3px 0;
+}
+
+ul.social > li > a:hover {
+    text-decoration: none;
+    background-color: #7da7d9;
+    color: #FFF;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0px;
+    line-height: 55px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.parallax {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-img-1 {
+    background: url("../img/bg02.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-img-2 {
+    background: url("../img/bg01.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.home-wrapper {
+    color: #ffffff;
+    padding: 120px 0px 203px 0px;
+}
+
+.center-wrapper {
+    color: #ffffff;
+    padding: 60px 0px 80px 0px;
+}
+
+.btn-rounded {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-primary {
+    background-color: #3bafda !important;
+    border: 1px solid #3bafda !important;
+}
+
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-inverse, .btn-purple, .btn-pink {
+    color: #ffffff !important;
+}
+
+.lead_link {
+    padding-top: 12px;
+}
+
+.lead_link a {
+    margin-right: 12px;
+}
+
+.nutzwk_li {
+    font-size: 18px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.money span {
+    padding: 4px;
+    font-size: 18px;
+    color: red;
+}
+
+.pay {
+    margin-top: -60px;
+    padding-top: -50px;
+    z-index: 999;
+    float: right !important;
+}
+
+.money_show {
+    color: #ffc107;
+}
+
+@media screen and (max-width: 800px) {
+    .pay_none {
+        display: none;
+    }
+}

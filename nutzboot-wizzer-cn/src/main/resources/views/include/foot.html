@@ -1,0 +1,29 @@
+<footer class="footer bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="copyright">&copy;2012-<span id="index_yaer"></span> NutzWk. QQ交流群: 68428921</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('.status').fadeOut();
+        $('.preloader').delay(350).fadeOut('slow');
+    });
+    $(document).ready(function () {
+        $("#index_yaer").html(new Date().getFullYear());
+        var wow = new WOW(
+            {
+                animateClass: 'animated',
+                offset: 100,
+                mobile: true
+            }
+        );
+        wow.init();
+        console.log("https://github.com/Wizzercn/NutzWk")
+        console.log("QQ:11624317")
+    });
+
+</script>
