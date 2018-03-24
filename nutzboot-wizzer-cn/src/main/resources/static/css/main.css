@@ -137,7 +137,10 @@ ul.social > li > a:hover {
     font-stretch: normal;
     letter-spacing: 0px;
 }
-
+.copyright a{
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
