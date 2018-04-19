@@ -53,6 +53,7 @@ public class MainServer {
                                 case "topicExchange"://主题模式,只需一个消费者消费
                                     switch (routingKey) {
                                         case "tio.data.get":
+                                            //todo
                                             log.debug("topic.data.get.......");
                                             break;
                                     }

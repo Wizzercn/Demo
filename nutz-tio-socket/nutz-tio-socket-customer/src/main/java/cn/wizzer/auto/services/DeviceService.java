@@ -10,5 +10,5 @@ import org.nutz.log.Logs;
 @IocBean
 public class DeviceService {
     private static final Log log = Logs.get();
-    public boolean
+    //todo
 }
