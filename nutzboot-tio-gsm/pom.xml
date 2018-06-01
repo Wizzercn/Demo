@@ -12,7 +12,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <nutzboot.version>2.2-SNAPSHOT</nutzboot.version>
         <tio.version>2.4.0.v20180508-RELEASE</tio.version>
-        <kafka_2.12.version>1.1.0</kafka_2.12.version>
     </properties>
 
     <dependencyManagement>
@@ -57,11 +56,6 @@
         <dependency>
             <groupId>org.nutz</groupId>
             <artifactId>nutzboot-starter-jetty</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka_2.12</artifactId>
-            <version>${kafka_2.12.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-codec</groupId>
