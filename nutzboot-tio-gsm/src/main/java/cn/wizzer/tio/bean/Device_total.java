@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * 设备数据统计表
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 @Table("device_total")
 public class Device_total implements Serializable {

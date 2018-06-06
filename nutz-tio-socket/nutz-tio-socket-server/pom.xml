@@ -11,7 +11,7 @@
     <url>http://www.wizzer.cn</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <nutz-version>1.r.65-SNAPSHOT</nutz-version>
+        <nutz-version>1.r.65</nutz-version>
         <tio-version>2.0.8.v20180205-RELEASE</tio-version>
         <tio-http-version>0.0.8-tio-http</tio-http-version>
         <redis-version>2.9.0</redis-version>

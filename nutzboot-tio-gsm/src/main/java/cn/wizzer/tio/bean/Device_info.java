@@ -5,7 +5,7 @@ import org.nutz.dao.entity.annotation.*;
 import java.io.Serializable;
 
 /**
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 @Table("device_info")
 public class Device_info implements Serializable {

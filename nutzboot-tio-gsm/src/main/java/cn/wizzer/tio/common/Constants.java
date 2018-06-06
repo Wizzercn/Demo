@@ -1,7 +1,7 @@
 package cn.wizzer.tio.common;
 
 /**
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 public class Constants {
     public final static int MSG_GSM_START_REQ = 1;

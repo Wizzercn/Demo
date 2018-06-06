@@ -12,7 +12,7 @@ import org.nutz.log.Logs;
 import org.nutz.mvc.annotation.Modules;
 
 /**
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 @IocBean(create = "init", depose = "close")
 @Modules(packages = "cn.wizzer")

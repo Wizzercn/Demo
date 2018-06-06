@@ -6,7 +6,7 @@ import cn.wizzer.tio.packet.MyPacket;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
-import org.tio.core.Aio;
+import org.tio.core.Tio;
 import org.tio.core.ChannelContext;
 import org.tio.core.utils.ByteBufferUtils;
 
@@ -16,7 +16,7 @@ import static cn.wizzer.tio.common.Constants.MSG_GSM_HEARTBEAT_ACK;
 
 /**
  * 心跳
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 @IocBean
 public class MyPingHandler implements MyBsHandlerIntf {
@@ -32,7 +32,7 @@ public class MyPingHandler implements MyBsHandlerIntf {
         sendPacket.setMsgType(MSG_GSM_HEARTBEAT_ACK);
         sendPacket.setData(data);
         try {
-            Aio.send(channelContext, sendPacket);
+            Tio.send(channelContext, sendPacket);
         }catch (Exception e){
             log.error(e.getMessage(),e);
         }

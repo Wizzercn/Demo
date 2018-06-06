@@ -5,7 +5,7 @@ import org.tio.core.intf.Packet;
 import java.io.Serializable;
 
 /**
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 public class MyPacket extends Packet implements Serializable {
     public static final int HEADER_LENGHT = 3;//消息头的长度

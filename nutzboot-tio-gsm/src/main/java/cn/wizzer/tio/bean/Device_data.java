@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 /**
  * 设备数据表
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 @Table("device_data")
 @TableIndexes({@Index(name = "INDEX_DATA", fields = {"equipID","timestamp"}, unique = true)})

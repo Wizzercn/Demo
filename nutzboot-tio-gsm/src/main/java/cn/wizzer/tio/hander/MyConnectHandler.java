@@ -10,7 +10,7 @@ import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
-import org.tio.core.Aio;
+import org.tio.core.Tio;
 import org.tio.core.ChannelContext;
 import org.tio.core.utils.ByteBufferUtils;
 
@@ -20,7 +20,7 @@ import static cn.wizzer.tio.common.Constants.MSG_GSM_START_ACK;
 
 /**
  * 初始化连接
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 @IocBean
 public class MyConnectHandler implements MyBsHandlerIntf {
@@ -40,15 +40,15 @@ public class MyConnectHandler implements MyBsHandlerIntf {
             sendPacket.setMsgType(MSG_GSM_START_ACK);
             sendPacket.setData("0".getBytes());
             //绑定设备ID到通道
-            Aio.bindToken(channelContext, "" + equipID);
+            Tio.bindToken(channelContext, "" + equipID);
             log.info("has bind equipID:::" + equipID);
-            Aio.send(channelContext, sendPacket);
+            Tio.send(channelContext, sendPacket);
         } else {//设备号不存在
             MyPacket sendPacket = new MyPacket();
             sendPacket.setLength(4);//2+1+1
             sendPacket.setMsgType(MSG_GSM_START_ACK);
             sendPacket.setData("1".getBytes());
-            Aio.send(channelContext, sendPacket);
+            Tio.send(channelContext, sendPacket);
         }
         return null;
     }

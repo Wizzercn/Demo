@@ -21,7 +21,7 @@ import java.nio.ByteBuffer;
 
 /**
  * 心跳
- * Created by JF on 2018/5/14.
+ * Created by wizzer on 2018/5/14.
  */
 @IocBean
 public class MyTotalHandler implements MyBsHandlerIntf {

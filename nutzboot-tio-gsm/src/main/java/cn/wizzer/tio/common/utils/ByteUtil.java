@@ -6,7 +6,7 @@ import java.io.*;
 import java.nio.charset.Charset;
 
 /**
- * Created by JF on 2018/5/15.
+ * Created by wizzer on 2018/5/15.
  */
 public class ByteUtil {
     public static byte[] getBytes(short data) {
