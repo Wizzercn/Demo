@@ -54,7 +54,7 @@
 <!-- Pagination -->
 <ul class="pagination justify-content-center">
     <li class="page-item">
-        <a class="page-link" href="javascript:void(0);" aria-label="Previous">
+        <a class="page-link" href="javascript:goPrev();" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
             <span class="sr-only">Previous</span>
         </a>
@@ -65,7 +65,7 @@
     </li>
     <%}%>
     <li class="page-item">
-        <a class="page-link" href="javascript:void(0);" aria-label="Next">
+        <a class="page-link" href="javascript:goNext();" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
             <span class="sr-only">Next</span>
         </a>
@@ -73,6 +73,22 @@
 </ul>
 
 </div>
+<script>
+    var page = parseInt("${page}");
+    var total = parseInt("${pageCount}");
+
+    function goPrev() {
+        var p = page - 1;
+        if (p <= 0) p = 1;
+        window.location.href = "/donation/" + p;
+    }
+
+    function goNext() {
+        var p = page + 1;
+        if (p >= total) p = total;
+        window.location.href = "/donation/" + p;
+    }
+</script>
 <!-- /.container -->
 <% include( "include/foot.html" ){}; %>
 </body>
