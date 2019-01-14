@@ -22,6 +22,10 @@ body {
     background: linear-gradient(#54616e, #353839);
 }
 
+.home {
+    position: relative;
+}
+
 .bg-overlay {
     background: -webkit-linear-gradient(#bcd7f1, #92ace7);
     background: -moz-linear-gradient(#444F5C, #334159);
