@@ -58,7 +58,7 @@ public class PcIndexController {
         pager.setPageSize(size);
         pager.setPageNumber(page);
         pager.setRecordCount(dao.count(Pm_info.class));
-        List<Pm_info> list = dao.query(Pm_info.class, Cnd.orderBy().desc("payAt"), pager);
+        List<Pm_info> list = dao.query(Pm_info.class, Cnd.orderBy().desc("opAt"), pager);
         Sql sql = Sqls.create("select sum(money) from pm_info");
         sql.setCallback(Sqls.callback.integer());
         dao.execute(sql);

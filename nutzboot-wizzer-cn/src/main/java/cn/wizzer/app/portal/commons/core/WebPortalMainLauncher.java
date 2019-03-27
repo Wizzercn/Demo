@@ -2,6 +2,7 @@ package cn.wizzer.app.portal.commons.core;
 
 import org.nutz.boot.NbApp;
 import org.nutz.dao.Dao;
+import org.nutz.dao.util.Daos;
 import org.nutz.ioc.Ioc;
 import org.nutz.ioc.impl.PropertiesProxy;
 import org.nutz.ioc.loader.annotation.Inject;
@@ -35,7 +36,13 @@ public class WebPortalMainLauncher {
     }
 
     public void init() {
-
+        try {
+            //创建表结构
+            Daos.createTablesInPackage(dao, "cn.wizzer.app", false);
+            //通过POJO类修改表结构
+            Daos.migration(dao, "cn.wizzer.app", true, false);
+        } catch (Exception e) {
+        }
     }
 
 

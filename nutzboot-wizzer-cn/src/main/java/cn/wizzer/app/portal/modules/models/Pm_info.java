@@ -1,7 +1,7 @@
 package cn.wizzer.app.portal.modules.models;
 
-import cn.wizzer.framework.base.model.BaseModel;
 import org.nutz.dao.entity.annotation.*;
+import org.nutz.lang.Times;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ import java.io.Serializable;
  * Created by wizzer on 2018/3/24.
  */
 @Table("pm_info")
-public class Pm_info extends BaseModel implements Serializable {
+public class Pm_info implements Serializable {
     private static final long serialVersionUID = 1L;
     @Column
     @Name
@@ -41,6 +41,16 @@ public class Pm_info extends BaseModel implements Serializable {
     @Column
     @ColDefine(type = ColType.BOOLEAN)
     private boolean disabled;
+
+    @Column
+    @Comment("操作时间")
+    @Prev(els = @EL("$me.now()"))
+    //Long不要用ColDefine定义,兼容oracle/mysql,支持2038年以后的时间戳
+    private Long opAt;
+
+    public Long now() {
+        return Times.getTS();
+    }
 
     public String getId() {
         return id;
@@ -96,5 +106,13 @@ public class Pm_info extends BaseModel implements Serializable {
 
     public void setDisabled(boolean disabled) {
         this.disabled = disabled;
+    }
+
+    public Long getOpAt() {
+        return opAt;
+    }
+
+    public void setOpAt(Long opAt) {
+        this.opAt = opAt;
     }
 }
