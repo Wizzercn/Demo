@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
     <url>https://www.wizzer.cn</url>
     <properties>
-        <nutzboot.version>2.3.2-SNAPSHOT</nutzboot.version>
+        <nutzboot.version>2.3.3-SNAPSHOT</nutzboot.version>
         <mysql-connector-java.version>5.1.47</mysql-connector-java.version>
         <slf4j-log4j12.version>1.7.25</slf4j-log4j12.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
